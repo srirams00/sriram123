@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1A1A1A"/>
+      <stop offset="50%" stop-color="#222222"/>
+      <stop offset="100%" stop-color="#111111"/>
+    </linearGradient>
+    <linearGradient id="yellowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFD95A"/>
+      <stop offset="100%" stop-color="#F5C542"/>
+    </linearGradient>
+    <filter id="yellowGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="400" fill="url(#bgGrad)" />
+  
+  <!-- Subtle Grid lines -->
+  <path d="M0 80 H400 M0 160 H400 M0 240 H400 M0 320 H400 M80 0 V400 M160 0 V400 M240 0 V400 M320 0 V400" 
+        stroke="#282828" stroke-width="1" stroke-dasharray="4 4" opacity="0.6"/>
+
+  <!-- Glowing Accent Ring -->
+  <circle cx="200" cy="180" r="110" fill="none" stroke="#F5C542" stroke-width="2" stroke-dasharray="6 6" opacity="0.4" />
+  <circle cx="200" cy="180" r="100" fill="#151515" stroke="url(#yellowGrad)" stroke-width="3" filter="url(#yellowGlow)"/>
+
+  <!-- Stylized Developer Silhouette / Monogram -->
+  <!-- Shoulders -->
+  <path d="M120 265 C120 220, 160 215, 200 215 C240 215, 280 220, 280 265 Z" fill="#262626" stroke="#333333" stroke-width="2"/>
+  <!-- Head -->
+  <circle cx="200" cy="155" r="42" fill="#2E2E2E" stroke="#444444" stroke-width="2"/>
+  <!-- Code brackets symbol in yellow on chest -->
+  <text x="200" y="165" font-family="'JetBrains Mono', monospace" font-size="28" font-weight="700" fill="#F5C542" text-anchor="middle">SR</text>
+
+  <!-- Terminal badge bar at bottom -->
+  <rect x="60" y="315" width="280" height="42" rx="8" fill="#1A1A1A" stroke="#303030" stroke-width="1.5"/>
+  <circle cx="82" cy="336" r="4" fill="#FF5F56"/>
+  <circle cx="96" cy="336" r="4" fill="#FFBD2E"/>
+  <circle cx="110" cy="336" r="4" fill="#27C93F"/>
+  <text x="130" y="341" font-family="'JetBrains Mono', monospace" font-size="12" fill="#A3A3A3">sriram@developer:~$</text>
+  <rect x="274" y="329" width="7" height="14" fill="#F5C542" opacity="0.8"/>
+</svg>

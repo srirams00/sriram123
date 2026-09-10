@@ -1,0 +1,168 @@
+/* About Page Stylesheet */
+
+.about-narrative-card {
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-2xl);
+  margin-bottom: var(--space-3xl);
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: var(--space-2xl);
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+@media (max-width: 860px) {
+  .about-narrative-card {
+    grid-template-columns: 1fr;
+    padding: var(--space-xl);
+    gap: var(--space-xl);
+  }
+}
+
+.about-bio-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--color-text-secondary);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.about-bio-text strong {
+  color: var(--color-text-primary);
+}
+
+.about-highlights-box {
+  background-color: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.about-highlight-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.92rem;
+  color: var(--color-text-primary);
+}
+
+.about-highlight-icon {
+  color: var(--color-primary-yellow);
+  flex-shrink: 0;
+}
+
+/* What I Do Grid */
+.what-i-do-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-lg);
+  margin-bottom: var(--space-4xl);
+}
+
+.what-i-do-card {
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  transition: all var(--transition-normal);
+}
+
+.what-i-do-card:hover {
+  border-color: var(--color-yellow-border);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-yellow-subtle);
+}
+
+.what-i-do-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.what-i-do-icon-box {
+  width: 42px;
+  height: 42px;
+  border-radius: var(--radius-sm);
+  background-color: var(--color-bg-secondary);
+  border: 1px solid var(--color-yellow-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary-yellow);
+}
+
+.what-i-do-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+}
+
+.what-i-do-desc {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+/* Experience & Education Cards */
+.timeline-card-large {
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem 2rem;
+  margin-bottom: var(--space-xl);
+  transition: all var(--transition-normal);
+  position: relative;
+}
+
+.timeline-card-large:hover {
+  border-color: var(--color-yellow-border);
+  box-shadow: var(--shadow-yellow-subtle);
+}
+
+.timeline-card-large-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.role-badge {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--color-primary-yellow);
+  background-color: var(--color-yellow-muted);
+  border: 1px solid var(--color-yellow-border);
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-full);
+}
+
+.institution-title {
+  font-size: 1.35rem;
+  color: var(--color-text-primary);
+  font-weight: 700;
+}
+
+.institution-sub {
+  font-size: 1rem;
+  color: var(--color-text-secondary);
+  margin-top: 0.2rem;
+}
+
+.institution-period {
+  font-family: var(--font-mono);
+  font-size: 0.88rem;
+  color: var(--color-primary-yellow);
+  font-weight: 600;
+}
