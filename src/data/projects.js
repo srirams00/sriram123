@@ -24,45 +24,18 @@ export const projects = [
     roleContribution: "Led the development sprint at FrontierWox. Designed the database models for halls and time-slot allocations, built RESTful endpoints for booking transactions, implemented role-based authorization, and oversaw frontend component integration.",
     challenges: "Handling concurrent booking requests for the same hall slot without race conditions, and modeling flexible recurring slots.",
     whatILearned: "Mastered concurrency checks in MongoDB transactions, role-based JWT auth flows, scalable state management with React, and leading a team through Agile delivery sprints.",
-    github: "https://github.com/",
-    liveDemo: "",
+    github: "https://github.com/srirams00/Hall-booking",
+    liveDemo: "https://sjc-campus-hall-allocation.vercel.app/",
     badge: "MERN Stack"
   },
   {
-    id: "drug-information-prescription-safety",
-    numericId: "02",
-    title: "Drug Information & Prescription Safety System",
-    subtitle: "Clinical safety portal & drug interaction search engine",
-    category: "Full Stack",
-    featured: true,
-    technologies: ["React", "Node.js", "Express.js", "MongoDB", "External API"],
-    description: "A web application designed to help users understand prescription and medicine information, counter-indications, and dosage guidelines.",
-    problem: "Patients and caregivers often struggle to decipher dense medical jargon, leading to accidental contraindications, improper dosage timing, and safety hazards.",
-    solution: "Developed an intuitive healthcare reference platform that combines external medical databases with clear user summaries, drug interaction checkers, prescription logs, and secure user profiles.",
-    features: [
-      "Instant medicine search with auto-suggest and brand/generic mapping",
-      "Third-party clinical medicine API integration for accurate data",
-      "Contraindication and interaction warning engine",
-      "Personal prescription management & dosage schedule logs",
-      "Secure user authentication with encrypted data persistence",
-      "Clean, high-contrast accessible UI designed for stress-free lookup"
-    ],
-    role: "Full Stack Developer",
-    roleContribution: "Integrated external healthcare REST APIs, normalized asynchronous responses, built a caching layer in Node.js/Express to prevent rate limits, and designed a streamlined React interface.",
-    challenges: "Handling large, nested JSON payloads from external pharmaceutical endpoints and sanitizing unstructured drug descriptions.",
-    whatILearned: "Enhanced skills in third-party API orchestration, backend caching strategies, asynchronous request handling, and building accessible UI for diverse demographics.",
-    github: "https://github.com/",
-    liveDemo: "",
-    badge: "MERN + API"
-  },
-  {
     id: "qr-code-generator",
-    numericId: "03",
+    numericId: "02",
     title: "QR Code Generator",
     subtitle: "Custom data encoding & vector QR generation tool",
     category: "Tools",
     featured: true,
-    technologies: ["Python", "Flask", "Web Technologies", "JavaScript"],
+    technologies: ["React"],
     description: "An independently developed project created to explore how QR codes are generated, formatted, error-corrected, and rendered.",
     problem: "Existing online QR tools are often overloaded with intrusive ads, tracking parameters, and paywalls for high-resolution vector exports.",
     solution: "Created a lightweight, ad-free utility that transforms URLs, plain text, Wi-Fi credentials, and contact cards into customizable QR codes with instant vector (SVG) and raster (PNG) downloads.",
@@ -79,12 +52,12 @@ export const projects = [
     challenges: "Understanding the matrix alignment patterns, timing patterns, and optimal error-correction trade-offs.",
     whatILearned: "Deepened knowledge of binary data encoding, 2D matrix transformation, algorithmic error correction, and Python image manipulation pipelines.",
     github: "https://github.com/",
-    liveDemo: "",
+    liveDemo: "https://subtle-kataifi-748794.netlify.app/",
     badge: "Python & Web"
   },
   {
     id: "it-department-website",
-    numericId: "04",
+    numericId: "03",
     title: "IT Department Website",
     subtitle: "Academic portal for student resources & faculty circulars",
     category: "Backend",
@@ -109,31 +82,5 @@ export const projects = [
     liveDemo: "",
     badge: "Python & Flask"
   },
-  {
-    id: "developer-portfolio",
-    numericId: "05",
-    title: "Developer Command Center Portfolio",
-    subtitle: "Personal engineering workspace & interactive project showcase",
-    category: "Frontend",
-    featured: false,
-    technologies: ["React", "Vite", "Vanilla CSS", "React Router", "Lucide React"],
-    description: "A custom-engineered developer portfolio featuring a warm yellow and deep charcoal palette, modular React architecture, and developer-centric telemetry components.",
-    problem: "Most developer portfolios use generic templates with flashy but distracting animations, failing to clearly communicate real engineering capabilities and project details.",
-    solution: "Designed and built an intentional developer command center interface from scratch with 100% Vanilla CSS, modular data-driven project models, accessible keyboard navigation, and responsive typography.",
-    features: [
-      "Custom CSS token architecture with zero bulky utility frameworks",
-      "Dedicated multi-page routing via React Router DOM",
-      "Interactive Project Detail modal and dedicated deep-linkable views",
-      "Interactive developer terminal snippet ($ whoami, $ status)",
-      "High-contrast Warm Yellow + Dark Charcoal theme (#F5C542)",
-      "Comprehensive accessibility, semantic markup, and responsive layouts"
-    ],
-    role: "Frontend Architect & Designer",
-    roleContribution: "Conceptualized the visual identity, built reusable React component libraries, authored the responsive CSS design system, and optimized bundle performance.",
-    challenges: "Creating a distinct, high-end developer aesthetic without relying on third-party CSS libraries or heavy 3D WebGL assets.",
-    whatILearned: "Advanced CSS Custom Properties, accessible modal dialogues, clean component abstractions, and performant responsive layouts.",
-    github: "https://github.com/",
-    liveDemo: "",
-    badge: "React & Vanilla CSS"
-  }
+  
 ];

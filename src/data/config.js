@@ -26,7 +26,7 @@ export const siteConfig = {
   socialLinks: {
     github: "https://github.com/",
     linkedin: "https://linkedin.com/in/",
-    email: "sriram.dev@example.com"
+    email: "srirams.dev0@gmail.com"
   },
   availability: "Open to internships, developer opportunities, freelance projects, and collaborations.",
   location: "India",

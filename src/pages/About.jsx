@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { GraduationCap, Briefcase, Code, CheckCircle, Server, Database, Network, LayoutTemplate, Rocket, ArrowRight } from 'lucide-react';
+import { GraduationCap, Briefcase, CheckCircle, ArrowRight } from 'lucide-react';
 import SectionTitle from '../components/common/SectionTitle';
 import Button from '../components/common/Button';
 import { siteConfig } from '../data/config';
@@ -9,39 +9,6 @@ export default function About() {
   useEffect(() => {
     document.title = "About Sriram | Full Stack Developer";
   }, []);
-
-  const whatIDoItems = [
-    {
-      title: "Frontend Development",
-      icon: Code,
-      desc: "Creating interactive, component-driven client applications using React, modern JavaScript, semantic HTML5, and clean vanilla CSS."
-    },
-    {
-      title: "Backend Development",
-      icon: Server,
-      desc: "Architecting reliable, scalable server runtimes and microservices using Node.js, Express, Python, and Flask."
-    },
-    {
-      title: "Database Integration",
-      icon: Database,
-      desc: "Designing document schemas with MongoDB Atlas and relational tables with SQLite/SQL, ensuring query efficiency and ACID consistency."
-    },
-    {
-      title: "REST API Development",
-      icon: Network,
-      desc: "Structuring predictable, stateless REST endpoints, JSON payload contracts, token authorization (JWT), and clear error reporting."
-    },
-    {
-      title: "Responsive Web Development",
-      icon: LayoutTemplate,
-      desc: "Crafting fluid layouts tailored for 320px mobile screens, tablets, laptops, and ultra-wide desktop displays without UI breaking."
-    },
-    {
-      title: "Project Deployment",
-      icon: Rocket,
-      desc: "Deploying applications through modern continuous delivery pipelines on Vercel, Netlify, Render, and PythonAnywhere."
-    }
-  ];
 
   return (
     <div className="page-wrapper about-page">
@@ -92,33 +59,6 @@ export default function About() {
               <CheckCircle className="about-highlight-icon" size={18} />
               <span>Passionate about Clean & Scalable Code</span>
             </div>
-          </div>
-        </div>
-
-        {/* What I Do Section */}
-        <div style={{ marginTop: 'var(--space-3xl)' }}>
-          <SectionTitle
-            badge="Services & Disciplines"
-            title="What I"
-            highlight="Do"
-            subtitle="The core capabilities I bring to software teams, internships, and collaborative builds."
-          />
-
-          <div className="what-i-do-grid">
-            {whatIDoItems.map((item) => {
-              const Icon = item.icon;
-              return (
-                <div key={item.title} className="what-i-do-card">
-                  <div className="what-i-do-header">
-                    <div className="what-i-do-icon-box">
-                      <Icon size={20} />
-                    </div>
-                    <h3 className="what-i-do-title">{item.title}</h3>
-                  </div>
-                  <p className="what-i-do-desc">{item.desc}</p>
-                </div>
-              );
-            })}
           </div>
         </div>
 
