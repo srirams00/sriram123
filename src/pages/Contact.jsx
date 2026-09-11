@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Mail, Send, CheckCircle2, Copy, Check, Sparkles, MapPin } from 'lucide-react';
+import { Mail, Send, CheckCircle2, Copy, Check, MapPin } from 'lucide-react';
 import { Github, Linkedin } from '../components/common/BrandIcons';
 import SectionTitle from '../components/common/SectionTitle';
 import Button from '../components/common/Button';
@@ -17,6 +17,7 @@ export default function Contact() {
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [submitError, setSubmitError] = useState('');
   const [copiedEmail, setCopiedEmail] = useState(false);
 
   useEffect(() => {
@@ -54,12 +55,34 @@ export default function Contact() {
     if (!validate()) return;
 
     setIsSubmitting(true);
-    // Simulate brief network submission for client-side demo
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setIsSubmitted(true);
-      setFormData({ name: '', email: '', subject: '', message: '' });
-    }, 800);
+    setSubmitError('');
+
+    fetch(siteConfig.contactFormEndpoint, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Accept: 'application/json'
+      },
+      body: JSON.stringify({
+        ...formData,
+        _subject: `Portfolio contact: ${formData.subject}`,
+        _replyto: formData.email
+      })
+    })
+      .then(async (response) => {
+        const result = await response.json().catch(() => ({}));
+        if (!response.ok || result.success === false) {
+          throw new Error(result.message || 'Unable to send your message right now.');
+        }
+
+        setIsSubmitting(false);
+        setIsSubmitted(true);
+        setFormData({ name: '', email: '', subject: '', message: '' });
+      })
+      .catch(() => {
+        setIsSubmitting(false);
+        setSubmitError('Your message could not be sent. Please email me directly using the address on this page.');
+      });
   };
 
   const copyEmailToClipboard = () => {
@@ -194,6 +217,9 @@ export default function Contact() {
                 >
                   {isSubmitting ? 'Sending Message...' : 'SEND MESSAGE'}
                 </Button>
+                {submitError && (
+                  <p className="form-submit-error" role="alert">{submitError}</p>
+                )}
               </form>
             )}
           </div>

@@ -1,5 +1,15 @@
 # React + Vite
 
+## Contact form
+
+The contact form sends messages to `srirams.dev0@gmail.com` through FormSubmit. The first submission requires confirming the activation email sent by FormSubmit. After activation, visitors' messages will arrive in that inbox and the reply-to address will be set to the sender's email.
+
+To use another form provider, create a `.env` file and set:
+
+```env
+VITE_CONTACT_FORM_ENDPOINT=https://your-provider.example/forms/endpoint
+```
+
 This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
 
 Currently, two official plugins are available:

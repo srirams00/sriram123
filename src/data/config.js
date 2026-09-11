@@ -28,6 +28,7 @@ export const siteConfig = {
     linkedin: "https://linkedin.com/in/",
     email: "srirams.dev0@gmail.com"
   },
+  contactFormEndpoint: import.meta.env.VITE_CONTACT_FORM_ENDPOINT || "https://formsubmit.co/ajax/srirams.dev0@gmail.com",
   availability: "Open to internships, developer opportunities, freelance projects, and collaborations.",
   location: "India",
   whoamiTerminal: [

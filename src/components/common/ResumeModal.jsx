@@ -1,5 +1,5 @@
 import React from 'react';
-import { X, FileText, Download, Mail, ExternalLink } from 'lucide-react';
+import { X, FileText, Download, Mail } from 'lucide-react';
 import { Linkedin } from './BrandIcons';
 import Button from './Button';
 import { siteConfig } from '../../data/config';
@@ -49,22 +49,6 @@ export default function ResumeModal({ isOpen, onClose }) {
         <p style={{ fontSize: '0.95rem', color: 'var(--color-text-secondary)', marginBottom: '1.5rem', lineHeight: 1.6 }}>
           You can download Sriram's official resume directly or get in touch for developer opportunities, internships, and project collaborations.
         </p>
-
-        <div style={{
-          backgroundColor: 'var(--color-bg-secondary)',
-          border: '1px solid var(--color-border)',
-          borderRadius: 'var(--radius-md)',
-          padding: '1rem',
-          marginBottom: '1.5rem',
-          fontSize: '0.85rem',
-          fontFamily: 'var(--font-mono)',
-          color: 'var(--color-text-secondary)'
-        }}>
-          <div style={{ color: 'var(--color-primary-yellow)', fontWeight: '600', marginBottom: '0.25rem' }}>
-            // File Location
-          </div>
-          <div>Path: {siteConfig.resumeUrl}</div>
-        </div>
 
         <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
           <Button
